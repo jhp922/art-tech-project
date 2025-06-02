@@ -144,6 +144,7 @@ function preload() {
 }
 
 function setup() {
+  let fs=fullscreen();
   createCanvas(windowWidth, windowHeight);
   textFont(pixelFont);
   noSmooth(); // 픽셀 느낌 유지
@@ -276,9 +277,13 @@ function drawCredit() {
 }
 
 function mousePressed(){
+  if (!fullscreen()) {
+    fullscreen(true); // 처음 클릭 시 전체화면 진입
+    return; // fullscreen만 실행하고 draw 안 바꿈
+  }
+
   if(state === "start") {
     state = "game";
-    // 캐릭터 등장 애니메이션 시작
     characterAppearAnim = true;
     characterAppearFrame = 0;
     characterAppearDone = false;
@@ -681,4 +686,10 @@ function isNearCharacter(x, y) {
 
 function gotHands(results) {
   hands = results;
+}
+
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }

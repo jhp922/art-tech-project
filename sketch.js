@@ -305,11 +305,6 @@ function keyPressed() {
     characterAppearDone = false;
   }
 
-  if (key === 'f' || key === 'F') {
-    let fs = fullscreen();
-    fullscreen(!fs); // 전체화면 토글
-  }
-
 }
 
 // 캐릭터 등장 픽셀 페이드인 애니메이션

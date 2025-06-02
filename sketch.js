@@ -136,7 +136,7 @@ function preload() {
   standImgs[0] = loadImage('child_stand.png');
   walkImgs[0]  = loadImage('child_walk.png');
   standImgs[1] = loadImage('teen_walk.png');
-  walkImgs[1]  = loadImage('teen_walk 2.png');
+  walkImgs[1]  = loadImage('teen_walk2.png');
   standImgs[2] = loadImage('adult_walk.png');
   walkImgs[2] = loadImage('adult_walk2.png');
   standImgs[3] = loadImage('old_walk.png');

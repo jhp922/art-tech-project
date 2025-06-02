@@ -281,9 +281,9 @@ function drawCredit() {
 }
 
 function mousePressed(){
-  if (!fullscreen()) {
+  /*if (!fullscreen()) {
     fullscreen(true); // 전체화면 전환
-  }
+  }*/
 
   if(state === "start") {
     state = "game";
@@ -304,6 +304,12 @@ function keyPressed() {
     characterAppearFrame = 0;
     characterAppearDone = false;
   }
+
+  if (key === 'f' || key === 'F') {
+    let fs = fullscreen();
+    fullscreen(!fs); // 전체화면 토글
+  }
+
 }
 
 // 캐릭터 등장 픽셀 페이드인 애니메이션
@@ -691,8 +697,6 @@ function isNearCharacter(x, y) {
 function gotHands(results) {
   hands = results;
 }
-
-
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);

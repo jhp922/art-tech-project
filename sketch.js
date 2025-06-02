@@ -133,14 +133,14 @@ function preload() {
   openHandImg = loadImage('openHand.png');
   closedHandImg = loadImage('closedHand.png');
 
-  standImgs[0] = loadImage('child stand.png');
-  walkImgs[0]  = loadImage('child walk.png');
-  standImgs[1] = loadImage('teen walk.png');
-  walkImgs[1]  = loadImage('teen walk 2.png');
-  standImgs[2] = loadImage('adult walk.png');
-  walkImgs[2] = loadImage('adult walk2.png');
-  standImgs[3] = loadImage('old walk.png');
-  walkImgs[3] = loadImage('old walk2.png');
+  standImgs[0] = loadImage('child_stand.png');
+  walkImgs[0]  = loadImage('child_walk.png');
+  standImgs[1] = loadImage('teen_walk.png');
+  walkImgs[1]  = loadImage('teen_walk 2.png');
+  standImgs[2] = loadImage('adult_walk.png');
+  walkImgs[2] = loadImage('adult_walk2.png');
+  standImgs[3] = loadImage('old_walk.png');
+  walkImgs[3] = loadImage('old_walk2.png');
 }
 
 function setup() {

@@ -144,7 +144,6 @@ function preload() {
 }
 
 function setup() {
-  let fs=fullscreen();
   createCanvas(windowWidth, windowHeight);
   textFont(pixelFont);
   noSmooth(); // 픽셀 느낌 유지
@@ -227,6 +226,7 @@ function drawStartScreen() {
 
   let mainText = "NATURE";
   let subText = "CLICK TO CONTINUE";
+  let explainText = "GRAB AND MOVE THE RED BOX TO THE CHARACTER";
 
   textAlign(CENTER, CENTER);
 
@@ -254,6 +254,10 @@ function drawStartScreen() {
     fill(0);
     text(subText, width / 2, height / 2 + 30);
   }
+
+  strokeWeight(0);
+  fill(0);
+  text(explainText, width / 2, height / 2 + 50);
 }
 
 function drawCredit() {
@@ -278,8 +282,7 @@ function drawCredit() {
 
 function mousePressed(){
   if (!fullscreen()) {
-    fullscreen(true); // 처음 클릭 시 전체화면 진입
-    return; // fullscreen만 실행하고 draw 안 바꿈
+    fullscreen(true); // 전체화면 전환
   }
 
   if(state === "start") {
@@ -291,6 +294,7 @@ function mousePressed(){
     isGiven = true;
   }
 }
+
 
 function keyPressed() {
   if (state === "start" && (key === ' ' || keyCode === ENTER)) {

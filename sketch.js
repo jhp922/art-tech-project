@@ -144,7 +144,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800,450);
   textFont(pixelFont);
   noSmooth(); // 픽셀 느낌 유지
   background(220);
@@ -230,33 +230,34 @@ function drawStartScreen() {
 
   textAlign(CENTER, CENTER);
 
-  
+  // 제목
   textSize(64);
   stroke(255);
   strokeWeight(12);
   fill(0);
-  text(mainText, width / 2, height / 2 - 40);
+  text(mainText, width / 2, height / 2 - 60);
 
-  stroke(255);
   strokeWeight(0);
   fill(0);
-  text(mainText, width / 2, height / 2 - 40);
+  text(mainText, width / 2, height / 2 - 60);
 
-  // INSERT A COIN TO CONTINUE (네온 픽셀 효과) - 깜빡임
+  // 서브텍스트 (깜빡이는 버튼 안내)
   if (frameCount % 60 < 30) {
     textSize(24);
     stroke(255);
     strokeWeight(6);
     fill(0);
-    text(subText, width / 2, height / 2 + 30);
+    text(subText, width / 2, height / 2 + 10);
 
     strokeWeight(0);
     fill(0);
-    text(subText, width / 2, height / 2 + 30);
+    text(subText, width / 2, height / 2 + 10);
   }
 
-  strokeWeight(0);
+  // 설명 텍스트는 항상 출력되게 하자
+  textSize(18);
   fill(0);
+  noStroke();
   text(explainText, width / 2, height / 2 + 50);
 }
 

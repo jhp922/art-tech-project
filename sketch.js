@@ -135,8 +135,8 @@ function preload() {
 
   standImgs[0] = loadImage('child_stand.png');
   walkImgs[0]  = loadImage('child_walk.png');
-  standImgs[1] = loadImage('teen_walk.png');
-  walkImgs[1]  = loadImage('teen_walk2.png');
+//  standImgs[1] = loadImage('teen_walk.png');
+//  walkImgs[1]  = loadImage('teen_walk2.png');
   
   standImgs[2] = loadImage('adult_walk.png');
   walkImgs[2] = loadImage('adult_walk2.png');
@@ -666,14 +666,12 @@ function nextCharacter() {
   sence += 1;
   switch(sence){
     case 1:
+    case 2:
       currentAge = 0;
       break;
-    case 2:
     case 3:
-      currentAge = 1;
-      break;
     case 4:
-      currentAge = 2;
+      currentAge = 2;  
       break;
     case 5:
       currentAge = 3;

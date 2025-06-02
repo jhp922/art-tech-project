@@ -144,7 +144,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800,450);
+  createCanvas(800, 450); // 고정된 캔버스 크기
   textFont(pixelFont);
   noSmooth(); // 픽셀 느낌 유지
   background(220);
@@ -155,8 +155,10 @@ function setup() {
   video.size(640, 480);
   video.hide();
   handPose.detectStart(video, gotHands);
+
   frameRate(20);
 }
+
 
 function draw() {
   if (state === "start") {
@@ -694,6 +696,3 @@ function gotHands(results) {
   hands = results;
 }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}

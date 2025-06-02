@@ -135,8 +135,9 @@ function preload() {
 
   standImgs[0] = loadImage('child_stand.png');
   walkImgs[0]  = loadImage('child_walk.png');
-  //standImgs[1] = loadImage('teen_walk.png');
-  //walkImgs[1]  = loadImage('teen_walk2.png');
+  standImgs[1] = loadImage('teen_walk.png');
+  walkImgs[1]  = loadImage('teen_walk2.png');
+  
   standImgs[2] = loadImage('adult_walk.png');
   walkImgs[2] = loadImage('adult_walk2.png');
   standImgs[3] = loadImage('old_walk.png');
@@ -267,6 +268,7 @@ function drawCredit() {
   background(0, 0, 0, 220);
   fill(255);
   textAlign(CENTER, TOP);
+  textFont('Arial');
   textSize(32);
   text("CREDIT", width / 2, creditY - 80);
 

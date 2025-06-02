@@ -144,7 +144,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 450);
+  createCanvas(windowWidth, windowHeight);
   textFont(pixelFont);
   noSmooth(); // 픽셀 느낌 유지
   background(220);
